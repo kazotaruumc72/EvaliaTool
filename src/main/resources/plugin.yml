@@ -1,0 +1,61 @@
+name: WildTools
+version: ${project.version}
+main: com.bgsoftware.wildtools.WildToolsPlugin
+
+description: Configurable trench picks, tray picks, sell-wands, harvester-hoes and more!
+website: https://bg-software.com/
+api-version: 1.13
+author: Ome_R
+folia-supported: true
+
+# Custom section used by DependenciesManager, which replaces softdepend.
+class-depends:
+  - ChunkCollectors
+  - ChunkHoppers
+  - Factions
+  - FactionsX
+  - GriefPrevention
+  - Lands
+  - MassiveCore
+  - mcMMO
+  - Residence
+  - RoseStacker
+  - SilkSpawners
+  - SuperMobCoins
+  - Towny
+  - Vault
+  - Villages
+  - WildChests
+  - WildStacker
+
+commands:
+  tools:
+    description: List of all wildtools command
+
+permissions:
+  wildtools.*:
+    description: Gives access to all the command.
+    default: op
+    children:
+      wildtools.use: true
+      wildtools.give: true
+      wildtools.info: true
+      wildtools.list: true
+      wildtools.reload: true
+      wildtools.sellmode: true
+      wildtools.settings: true
+  wildtools.use:
+    description: Gives access to use the custom tools.
+    default: true
+  wildtools.give:
+    description: Gives access to give tools to other players.
+  wildtools.info:
+    description: Gives access to get information about tools.
+  wildtools.list:
+    description: Gives access to see all tools.
+  wildtools.reload:
+    description: Gives access to reload all configuration files.
+  wildtools.sellmode:
+    description: Gives access to use harvester sell mode.
+  wildtools.settings:
+    description: Gives access to use settings editor.
